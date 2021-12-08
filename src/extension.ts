@@ -6,6 +6,12 @@ import * as vscode from 'vscode';
 // your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
 	
+    context.subscriptions.push(vscode.commands.registerCommand('extension.cucumberjs-debugger.getProgramName', config => {
+		return vscode.window.showInputBox({
+			placeHolder: "Please enter the name of a feature file in the workspace folder"
+		});
+	}));
+
 	// Use the console to output diagnostic information (console.log) and errors (console.error)
 	// This line of code will only be executed once when your extension is activated
 	console.log('Congratulations, your extension "cucumberjs-debugger" is now active!');
