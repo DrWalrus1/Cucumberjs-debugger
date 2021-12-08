@@ -4,6 +4,11 @@
     "description": "An extension for debugging cucumberjs scenarios and steps",
     "version": "0.0.1",
     "publisher": "dr-walrus",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DrWalrus1/Cucumberjs-debugger.git"
+    },
+    "icon": "images/debugger-icon.png",
     "engines": {
         "vscode": "^1.62.0",
         "node": "^14.16.0"
