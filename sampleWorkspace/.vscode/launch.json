@@ -1,0 +1,27 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Ask for file name",
+            "program": "${workspaceFolder}/${command:AskForProgramName}",
+            "stopOnEntry": true
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "CucumberJs",
+            "program": "${workspaceFolder}/node_modules/.bin/cucumber-js",
+            "skipFiles": [
+                "<node_internals>/**",
+                "${workspaceFolder}/node_modules/@cucumber/cucumber/lib"
+            ],
+            "console": "integratedTerminal",
+            "args": ["${workspaceFolder}/features/test.feature"]
+        }
+    ]
+}
