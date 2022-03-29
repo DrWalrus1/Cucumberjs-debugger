@@ -7,6 +7,9 @@ import * as vscode from 'vscode';
 export function activate(context: vscode.ExtensionContext) {
 	
     context.subscriptions.push(vscode.commands.registerCommand('extension.cucumberjs-debugger.getProgramName', config => {
+        // This could be a way of interacting with a javascript debug terminal
+        console.log(vscode.window.terminals);
+        vscode.window.terminals[1].sendText('echo "Hello World"', true);
 		return vscode.window.showInputBox({
 			placeHolder: "Please enter the name of a feature file in the workspace folder"
 		});
